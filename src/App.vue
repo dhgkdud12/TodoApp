@@ -6,26 +6,25 @@
       type="text" 
       class="w-100 p-2" 
       placeholder="Type todo"
-      @keyup.enter="addTodo">
+      @keyup.enter="addTodo"
+      >
    <hr>
-   <Todo 
-      v-for="todo in todos" 
-      :key="todo.id" 
-      :todo="todo"
-      @toggle-checkbox="toggleCheckbox"
-      @click-delete="deleteTodo"/>
-   <Todo/>
-
+   <TodoList
+    :todos ="todos" 
+    @toggle-checkbox="toggleCheckbox"
+    @click-delete="deleteTodo"
+   /> 
    {{todos}}
   </div>
 </template>
 
 <script>
-import Todo from '@/components/Todo.vue';
+import TodoList from '@/components/TodoList';
 export default {
   components:{
-    Todo
+    TodoList
   },
+
   data(){
     return {
       todoText: '',

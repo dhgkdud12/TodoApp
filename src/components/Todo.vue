@@ -24,7 +24,7 @@ export default {
     props: {
         todo:{
             type: Object,
-            required: true
+            required: true //필수로 보내줘야 함.
         }
     },
     methods:{
