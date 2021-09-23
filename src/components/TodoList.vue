@@ -24,7 +24,7 @@ export default {
             required: true
         }
     },
-    metodes: {
+    methods: {
         toggleCheckbox(value){
             this.$emit('toggle-checkbox', value)
         },

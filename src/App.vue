@@ -52,7 +52,7 @@ export default {
       });
       this.todoText = '';
     },
-    toggleCheckbox({id,checked}){
+    toggleCheckbox({id,checked}){ //구조 분해 할당
       const index = this.todos.findIndex(todo => {
         return todo.id === id;
       });
